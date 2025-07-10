@@ -75,6 +75,25 @@
       text-decoration: underline;
     }
 
+    .contact {
+      text-align: center;
+    }
+
+    .contact button {
+      background-color: #5865F2;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    .contact button:hover {
+      background-color: #404EED;
+    }
+
     @media (max-width: 600px) {
       header img {
         width: 80px;
@@ -113,25 +132,47 @@
   </section>
 
   <section>
-    <h1> Available Slash Commands </h1>
-    <ui>
-      <li> /setup-help - Step-by-step Guide for Correctly Setting Up the Bot. </li>
-      <li> /logging - Disable or Enable Logging. </li>
-      <li> /createlogs - Creates Category and Channels for Logging. </li>
-      <li> /automod-settings - Change Auto-Moderation Settings, </li>
-      <li> /kick - Used to Kick a Member with a Reason. </li>
-      <li> /ban - Used for Banning a Member with a Reason. </li>
-    </ui>
+    <h2>Available Slash Commands</h2>
+    <ul>
+      <li>/setup-help – Step-by-step guide for setting up the bot</li>
+      <li>/logging – Enable or disable logging</li>
+      <li>/createlogs – Create category and channels for logs</li>
+      <li>/automod-settings – Configure auto-moderation</li>
+      <li>/kick – Kick a member with a reason</li>
+      <li>/ban – Ban a member with a reason</li>
+    </ul>
   </section>
 
-  <section>
+  <section class="contact">
     <h2>Contact</h2>
-    <p> Direct Message me on Discord! Username: YouTubeGaming33 </p>
+    <p>
+      <strong>Discord:</strong> <span id="discord-username">YouTubeGaming33</span>
+    </p>
+    <button onclick="copyDiscord()">📋 Copy Username</button>
+    <p id="copy-feedback" style="display:none; color: green; margin-top: 0.5rem;">Copied to clipboard!</p>
   </section>
 
   <footer>
     &copy; 2025 YouTubeGaming33. All rights reserved.
   </footer>
+
+  <script>
+    function copyDiscord() {
+      const username = document.getElementById("discord-username").innerText;
+      navigator.clipboard.writeText(username)
+        .then(() => {
+          const feedback = document.getElementById("copy-feedback");
+          feedback.style.display = "block";
+          setTimeout(() => {
+            feedback.style.display = "none";
+          }, 2000);
+        })
+        .catch(err => {
+          alert("Clipboard copy failed. Please copy manually.");
+          console.error(err);
+        });
+    }
+  </script>
 
 </body>
 </html>
