@@ -148,31 +148,11 @@
     <p>
       <strong>Discord:</strong> <span id="discord-username">YouTubeGaming33</span>
     </p>
-    <button onclick="copyDiscord()">📋 Copy Username</button>
-    <p id="copy-feedback" style="display:none; color: green; margin-top: 0.5rem;">Copied to clipboard!</p>
   </section>
 
   <footer>
     &copy; 2025 YouTubeGaming33. All rights reserved.
   </footer>
-
-  <script>
-    function copyDiscord() {
-      const username = document.getElementById("discord-username").innerText;
-      navigator.clipboard.writeText(username)
-        .then(() => {
-          const feedback = document.getElementById("copy-feedback");
-          feedback.style.display = "block";
-          setTimeout(() => {
-            feedback.style.display = "none";
-          }, 2000);
-        })
-        .catch(err => {
-          alert("Clipboard copy failed. Please copy manually.");
-          console.error(err);
-        });
-    }
-  </script>
 
 </body>
 </html>
