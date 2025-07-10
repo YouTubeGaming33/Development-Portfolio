@@ -208,32 +208,11 @@
     <div class="discord">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord Icon">
       <span id="discord-username">YouTubeGaming33</span>
-    </div>
-    <button onclick="copyDiscord()">📋 Copy Username</button>
-    <p id="copy-feedback">Copied to clipboard!</p>
   </section>
 
   <footer>
     &copy; 2025 YouTubeGaming33. All rights reserved.
   </footer>
-
-  <script>
-    function copyDiscord() {
-      const username = document.getElementById("discord-username").innerText;
-      navigator.clipboard.writeText(username)
-        .then(() => {
-          const feedback = document.getElementById("copy-feedback");
-          feedback.style.display = "block";
-          setTimeout(() => {
-            feedback.style.display = "none";
-          }, 2000);
-        })
-        .catch(err => {
-          alert("Clipboard copy failed. Please copy manually.");
-          console.error(err);
-        });
-    }
-  </script>
 
 </body>
 </html>
