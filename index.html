@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of YouTubeGaming33, a UK-based developer studying Digital Production & Design." />
   <title>YouTubeGaming33 – Portfolio</title>
+
+  <!-- Font Awesome for Discord icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     body {
       margin: 0;
@@ -96,6 +100,26 @@
       text-decoration: underline;
     }
 
+    /* Center contact section */
+    .contact {
+      text-align: center;
+    }
+
+    /* Style for copy button */
+    .contact button {
+      background-color: #5865F2;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #404EED;
+    }
+
     @media (max-width: 600px) {
       header img {
         width: 80px;
@@ -166,14 +190,29 @@
 
   </section>
 
-  <section>
+  <section class="contact">
     <h2>Contact</h2>
-    <p>Send me a Direct Message on Discord! Username: YouTubeGaming33</p>
+    <p>
+      <i class="fab fa-discord" style="color: #5865F2;"></i>
+      <span id="discord-username">YouTubeGaming33</span>
+      <button onclick="copyDiscord()">📋 Copy</button>
+    </p>
   </section>
 
   <footer>
     &copy; 2025 YouTubeGaming33. All rights reserved.
   </footer>
+
+  <script>
+    function copyDiscord() {
+      const text = document.getElementById("YouTubeGaming33").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Discord username copied to clipboard!");
+      }).catch(err => {
+        console.error("Copy failed:", err);
+      });
+    }
+  </script>
 
 </body>
 </html>
