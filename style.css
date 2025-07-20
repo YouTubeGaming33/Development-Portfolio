@@ -38,18 +38,18 @@ section {
   margin: 2rem auto;
   padding: 1rem;
   box-sizing: border-box;
-  text-align: center; /* Center section content */
+  text-align: center;
 }
 
 /* Section titles */
-h2 {
+section h2 {
   color: #383838;
   border-bottom: 2px solid #383838;
   padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
   display: inline-block;
-  width: 100%;
   text-align: center;
+  width: auto;
 }
 
 /* Project cards */
@@ -64,7 +64,7 @@ h2 {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-  text-align: left; /* Keep project text left-aligned */
+  text-align: left;
 }
 
 .project:hover {
@@ -87,6 +87,10 @@ h2 {
 .project div {
   flex: 1;
   min-width: 200px;
+}
+
+.project h3 {
+  margin-top: 0;
 }
 
 /* Footer */
