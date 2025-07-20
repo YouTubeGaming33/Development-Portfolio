@@ -1,3 +1,4 @@
+/* General layout and typography */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -5,6 +6,7 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   background: #383838;
   color: white;
@@ -30,27 +32,27 @@ header p {
   margin-top: 0.5rem;
 }
 
-.round {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
+/* Section layout */
 section {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
   box-sizing: border-box;
+  text-align: center; /* Center section content */
 }
 
+/* Section titles */
 h2 {
   color: #383838;
   border-bottom: 2px solid #383838;
   padding-bottom: 0.25rem;
   margin-bottom: 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
+/* Project cards */
 .project {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -62,6 +64,7 @@ h2 {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+  text-align: left; /* Keep project text left-aligned */
 }
 
 .project:hover {
@@ -80,11 +83,13 @@ h2 {
   border-radius: 50%;
 }
 
+/* Text content within project */
 .project div {
   flex: 1;
   min-width: 200px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -92,6 +97,7 @@ footer {
   color: #777;
 }
 
+/* Links */
 a {
   color: #383838;
   text-decoration: none;
@@ -101,6 +107,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Contact section */
 .contact {
   text-align: center;
   padding-bottom: 2rem;
@@ -140,6 +147,7 @@ a:hover {
   display: none;
 }
 
+/* Responsive design */
 @media (max-width: 600px) {
   header img {
     width: 80px;
@@ -157,6 +165,7 @@ a:hover {
   .project {
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
   }
 
   .project img {
