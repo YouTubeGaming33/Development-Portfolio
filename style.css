@@ -39,22 +39,27 @@ section {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
+  border-top: 2px solid #383838;
+}
+
+section:first-of-type {
+  border-top: none; /* Skip border for the first section */
 }
 
 /* Section titles */
-section h2 {
-  color: #383838;
-  border-bottom: 2px solid #383838;
-  padding-bottom: 0.25rem;
-  margin: 0 auto 1rem;
-  display: inline-block;
+h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
   text-align: center;
-  width: auto;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #383838;
 }
 
 /* Project cards */
 .project {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
@@ -89,10 +94,6 @@ section h2 {
   min-width: 200px;
 }
 
-.project h3 {
-  margin-top: 0;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -118,17 +119,18 @@ a:hover {
 }
 
 .contact .discord {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
   justify-content: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 .contact img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
 }
 
 .contact button {
