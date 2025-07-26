@@ -39,28 +39,39 @@
     }
 
     section {
-      max-width: 800px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: 3rem auto;
       padding: 0 1rem;
-    }
-
-    h2 {
-      color: #383838;
-      border-bottom: 2px solid #383838;
-      padding-bottom: 0.25rem;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      color: #383838;
-      border-bottom: 2px solid #383838;
-      padding-bottom: 0.25rem;
-      margin-bottom: 1rem;
       text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      margin: 0.5rem auto 1rem;
+      width: 60px;
+      border-bottom: 3px solid #383838;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 3px solid #383838;
+      margin: 3rem auto;
+      width: 90%;
     }
 
     ul {
       padding-left: 1.2rem;
+      text-align: left;
+      display: inline-block;
     }
 
     li {
@@ -83,9 +94,6 @@
       text-decoration: underline;
     }
 
-    .contact {
-      text-align: center;
-    }
     .contact {
       text-align: center;
     }
@@ -128,10 +136,18 @@
   </header>
 
   <section>
-    <h3>What is George?</h3>
+    <div class="section-title">About Me</div>
     <p>
-      George is a Discord Bot for the AMT Community Discord Server, ran by OC01. It offers features such as:
+      I'm a college student based in the United Kingdom studying Digital Production, Design and Development<br>
+      with a specialization in Software Development.
     </p>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="section-title">Projects</div>
+    <p>George is a Discord Bot for the AMT Community Discord Server, ran by OC01. It offers features such as:</p>
     <ul>
       <li>Auto-Moderation</li>
       <li>Moderation Tools</li>
@@ -141,16 +157,17 @@
       <li>Auto-responders</li>
     </ul>
   </section>
-    
-  </section>
-   <section class="contact">
-    <h3>Contact</h3>
+
+  <hr>
+
+  <section class="contact">
+    <div class="section-title">Contact</div>
     <div class="discord">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord Icon">
       <span id="discord-username">YouTubeGaming33</span>
-  </div>
+    </div>
   </section>
-  
+
   <footer>
     &copy; 2025 YouTubeGaming33. All rights reserved.
   </footer>
