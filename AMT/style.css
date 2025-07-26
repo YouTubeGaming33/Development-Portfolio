@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #383838;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto 1rem;
+  width: 60px;
+  border-bottom: 3px solid #383838;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px solid #383838;
+  margin: 3rem auto;
+  width: 90%;
+}
+
+ul {
+  padding-left: 1.2rem;
+  text-align: left;
+  display: inline-block;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+a {
+  color: #383838;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact .discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 600px) {
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
