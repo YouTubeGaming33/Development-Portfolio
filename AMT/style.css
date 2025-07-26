@@ -39,22 +39,33 @@ section {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  border-top: 2px solid #383838;
 }
 
-section:first-of-type {
-  border-top: none; /* Skip border for the first section */
-}
-
-/* Section titles */
-h2 {
-  margin-top: 0;
-  font-size: 1.6rem;
+/* Screenshot-style section titles */
+.section-title {
+  font-size: 2.2rem;
   font-weight: bold;
   text-align: center;
   display: inline-block;
-  padding-bottom: 0.25rem;
-  border-bottom: 2px solid #383838;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  border-bottom: 4px solid #383838;
+  margin: 0.5rem auto 0;
+}
+
+/* Screenshot-style thick section divider */
+.section-divider {
+  height: 4px;
+  background-color: #383838;
+  margin: 3rem auto;
+  width: 96%;
+  border: none;
 }
 
 /* Project cards */
