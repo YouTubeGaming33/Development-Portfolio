@@ -1,14 +1,15 @@
 /* General layout and typography */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #383838;
+  background-color: #383838;
   color: white;
   padding: 2rem 1rem;
   text-align: center;
@@ -24,85 +25,91 @@ header img {
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 header p {
-  font-size: 1.1rem;
   margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
-/* Section layout */
+/* Section styling */
 section {
-  max-width: 800px;
+  max-width: 700px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+  border-top: 4px solid #383838;
 }
 
-/* Screenshot-style section titles */
-.section-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  display: inline-block;
-  position: relative;
+/* Remove border-top from first section */
+section:first-of-type {
+  border-top: none;
+}
+
+/* Section titles */
+section h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
   margin-bottom: 1rem;
+  font-weight: 700;
+  color: #383838;
+  display: inline-block;
+  border-bottom: 3px solid #383838;
+  padding-bottom: 0.25rem;
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 40px;
-  border-bottom: 4px solid #383838;
-  margin: 0.5rem auto 0;
+/* Paragraph inside sections */
+section p {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  color: #555;
 }
 
-/* Screenshot-style thick section divider */
-.section-divider {
-  height: 4px;
-  background-color: #383838;
-  margin: 3rem auto;
-  width: 96%;
-  border: none;
-}
-
-/* Project cards */
-.project {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
+/* List styling */
+section ul {
   text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-left: 20px;
+  color: #555;
 }
 
-.project:hover {
-  transform: translateY(-4px);
+section ul li {
+  margin-bottom: 0.5rem;
 }
 
-.project img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
+/* Contact section */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
 }
 
-.project .round {
-  border-radius: 50%;
+/* Discord user line */
+.discord {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #383838;
+  font-weight: 600;
 }
 
-/* Text content within project */
-.project div {
-  flex: 1;
-  min-width: 200px;
+.discord img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  filter: invert(34%) sepia(86%) saturate(2000%) hue-rotate(232deg) brightness(91%) contrast(86%);
 }
 
 /* Footer */
@@ -111,57 +118,7 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.9rem;
   color: #777;
-}
-
-/* Links */
-a {
-  color: #383838;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Contact section */
-.contact {
-  text-align: center;
-  padding-bottom: 2rem;
-}
-
-.contact .discord {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-
-.contact img {
-  width: 28px;
-  height: 28px;
-  vertical-align: middle;
-}
-
-.contact button {
-  background-color: #5865F2;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact button:hover {
-  background-color: #404EED;
-}
-
-#copy-feedback {
-  color: green;
-  margin-top: 0.5rem;
-  display: none;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsive design */
@@ -179,21 +136,12 @@ a:hover {
     font-size: 1rem;
   }
 
-  .project {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  section {
+    margin: 1rem;
+    padding: 1rem;
   }
 
-  .project img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-
-  .project .round {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
+  section ul {
+    max-width: 100%;
   }
 }
