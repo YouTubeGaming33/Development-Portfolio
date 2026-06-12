@@ -18,6 +18,31 @@
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+      position: relative; /* Added to anchor the absolute positioned button */
+    }
+
+    /* Home Button Styles (Matching the main portfolio) */
+    #home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #4a4a4a;
+      color: #ffffff;
+      border: 1px solid #555;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-family: 'Segoe UI', sans-serif;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    #home:hover {
+      background-color: #555555;
+    }
+
+    #home:active {
+      transform: scale(0.97);
     }
 
     header img {
@@ -86,9 +111,6 @@
     .contact {
       text-align: center;
     }
-    .contact {
-      text-align: center;
-    }
 
     .contact .discord {
       display: inline-flex;
@@ -122,7 +144,8 @@
 <body>
 
   <header>
-    <img src="George.jpg" alt="Unk0wn Bot Logo" />
+    <button id="home" onclick="window.location.href='../index.html'">Home</button>
+    <img src="George.jpg" alt="George Bot Logo" />
     <h1>George</h1>
     <p>Moderation • Ticketing • Missions</p>
   </header>
@@ -156,33 +179,33 @@
       <li>/help - Provides information on receiving help both in AMT and ATT</li>
       <li>/open-ticket - Open a ticket with the Moderation Team</li>
     </ul>
+  </section>
 
   <section style="text-align: center;">
-  <h3>Join A Mythical Tale</h3>
-  <p>You can join the A Mythical Tale Discord Server with the link below:</p>
-  <p style="text-align:center;">
-    <a href="https://discord.gg/untUHYTe6Q" target="_blank" style="
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #5865F2;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    ">
-      Join AMT
-    </a>
-  </p>
-</section>
-    
+    <h3>Join A Mythical Tale</h3>
+    <p>You can join the A Mythical Tale Discord Server with the link below:</p>
+    <p style="text-align:center;">
+      <a href="https://discord.gg/untUHYTe6Q" target="_blank" style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #5865F2;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      ">
+        Join AMT
+      </a>
+    </p>
   </section>
-   <section class="contact">
+      
+  <section class="contact">
     <h3>Contact</h3>
     <div class="discord">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord Icon">
       <span id="discord-username">YouTubeGaming33</span>
-  </div>
+    </div>
   </section>
   
   <footer>
