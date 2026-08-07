@@ -1,80 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of YouTubeGaming33, a UK-based developer studying Digital Production & Design." />
-  <title>YouTubeGaming33 – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="YouTubeGaming33 is a UK software development student building Discord bots and tools for online communities.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>YouTubeGaming33 — Discord bot developer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <nav class="nav shell" aria-label="Main navigation">
+    <a class="wordmark" href="./"><span class="prompt" aria-hidden="true">&gt;_</span> YTG33</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Say hello</a>
+    </div>
+  </nav>
 
-  <header>
-    <button id="home" onclick="window.location.href='index.html'">Home</button>
-    <img src="pfp.jpg" alt="YouTubeGaming33 Profile Picture" />
-    <h1>YouTubeGaming33</h1>
-    <p>Developer • Student</p>
-  </header>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm a college student based in the United Kingdom studying Digital Production, Design and Development with a specialization in Software Development.
-    </p>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="project">
-      <img src="Unk0wn.jpg" class="round" alt="Unk0wn Discord Bot" />
-      <div>
-        <h3>Unk0wn</h3>
-        <p>
-          A Discord bot featuring SQLite-backed logging, automod tools, and slash commands built with Python and discord.py.
-          <br>
-          <a href="Unk0wn/">View project →</a>
-        </p>
+  <main id="content">
+    <header class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker"><span class="status-dot"></span> Building in the United Kingdom</p>
+        <h1>Discord bots that keep communities <em>moving.</em></h1>
+        <p class="lede">I’m YouTubeGaming33, a software development student turning moderation, support, and game-community workflows into practical Python tools.</p>
+        <div class="actions">
+          <a class="button primary" href="#work">See selected work <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="https://discord.com/app" target="_blank" rel="noreferrer">Find me on Discord <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-    </div>
+      <aside class="terminal" aria-label="Developer profile summary">
+        <div class="terminal-bar"><span></span><span></span><span></span><small>profile.json</small></div>
+        <pre><code>{
+  <b>"name"</b>: "YouTubeGaming33",
+  <b>"focus"</b>: [
+    "Discord bots",
+    "community tools"
+  ],
+  <b>"stack"</b>: [
+    "Python", "discord.py", "SQLite"
+  ],
+  <b>"status"</b>: <i>"learning by building"</i>
+}</code></pre>
+      </aside>
+    </header>
 
-    <div class="project">
-      <img src="AMT.jpg" alt="AMT Discord Toolkit" />
-      <div>
-        <h3>AMT</h3>
-        <p>
-          A Dedicated Discord Bot for the Community A Mythical Tale, based on AltaVR's Titles A Township Tale and Reave.
-          <br>
-          <a href="AMT/">View project →</a>
-        </p>
+    <section class="marquee" aria-label="Skills">
+      <div>PYTHON <span>✦</span> DISCORD.PY <span>✦</span> SQLITE <span>✦</span> SLASH COMMANDS <span>✦</span> AUTOMATION <span>✦</span> COMMUNITY TOOLS</div>
+    </section>
+
+    <section class="section shell" id="work">
+      <div class="section-intro">
+        <div><p class="kicker">01 / Selected work</p><h2>Built around real community needs.</h2></div>
+        <p>Three focused Discord projects spanning reusable moderation, custom community systems, and game-server integrations.</p>
       </div>
-    </div>
 
-    <div class="project">
-      <img src="Creation.png" alt="Creation Discord Bot" />
-      <div>
-        <h3>Creation</h3>
-        <p>
-          A Dedicated Discord Bot for the Community Jamswerts' Create, based on a Create Focused Modpack on Minecraft Java.
-          <br>
-          <a href="Creation/">View project →</a>
-        </p>
+      <div class="project-list">
+        <article class="project featured">
+          <a class="project-visual violet" href="Unk0wn/" aria-label="Read the Unk0wn case study"><span class="project-number">01</span><img class="round" src="Unk0wn.jpg" alt="Unk0wn bot logo"></a>
+          <div class="project-copy">
+            <p class="kicker">Moderation system</p><h3>Unk0wn</h3>
+            <p>A configurable Discord bot for smaller communities, bringing logging, automod, ticketing, levelling, and moderation commands into one toolkit.</p>
+            <ul class="tags"><li>Python</li><li>discord.py</li><li>SQLite</li></ul>
+            <a class="text-link" href="Unk0wn/">Explore the build <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <a class="project-visual amber" href="AMT/" aria-label="Read the George for AMT case study"><span class="project-number">02</span><img src="AMT.jpg" alt="A Mythical Tale logo"></a>
+          <div class="project-copy">
+            <p class="kicker">Custom community bot</p><h3>George <small>for AMT</small></h3>
+            <p>A purpose-built bot for A Mythical Tale, combining moderation and support with bounties, missions, player profiles, and marketplace listings.</p>
+            <ul class="tags"><li>Python</li><li>Slash commands</li><li>Community systems</li></ul>
+            <a class="text-link" href="AMT/">Explore the build <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <a class="project-visual green" href="Creation/" aria-label="Read the Creation case study"><span class="project-number">03</span><img src="Creation.png" alt="Creation bot logo"></a>
+          <div class="project-copy">
+            <p class="kicker">Minecraft integration</p><h3>Creation</h3>
+            <p>A utility bot for a Minecraft Java community that connects Discord members with moderation tools, live server status, and player information.</p>
+            <ul class="tags"><li>Python</li><li>discord.py</li><li>Server status</li></ul>
+            <a class="text-link" href="Creation/">Explore the build <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-  </section>
+    <section class="section shell about" id="about">
+      <div><p class="kicker">02 / About</p><h2>Curious by default.<br>Practical by choice.</h2></div>
+      <div class="about-copy">
+        <p>I’m a UK college student studying Digital Production, Design and Development, specialising in software development.</p>
+        <p>I learn best by shipping useful things. Right now that means exploring Python, Discord automation, data-backed features, and the details that make community tools dependable.</p>
+        <div class="principles"><span>Build for a need</span><span>Keep improving</span><span>Make it understandable</span></div>
+      </div>
+    </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <div class="discord">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord Icon">
-      <span id="discord-username">YouTubeGaming33</span>
-    </div>
-  </section>
+    <section class="contact shell" id="contact">
+      <p class="kicker">03 / Contact</p>
+      <h2>Have a community problem worth solving?</h2>
+      <p>Find me on Discord as <strong>YouTubeGaming33</strong>.</p>
+      <a class="button primary" href="https://discord.com/app" target="_blank" rel="noreferrer">Open Discord <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
 
-  <footer>
-    &copy; 2025 YouTubeGaming33. All rights reserved.
-  </footer>
-
+  <footer class="footer shell"><span>© 2026 YouTubeGaming33</span><span>Designed &amp; built with intent.</span></footer>
 </body>
 </html>
