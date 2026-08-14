@@ -1,8 +1,7 @@
 const memberCount = document.querySelector(".member-count");
 const communityReach = document.querySelector(".community-reach");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (memberCount && communityReach && !reduceMotion) {
+if (memberCount && communityReach) {
   const target = Number(memberCount.dataset.count);
   const duration = 4000;
   const numberFormatter = new Intl.NumberFormat("en-GB");
