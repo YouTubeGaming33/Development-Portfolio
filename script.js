@@ -1,12 +1,14 @@
 const memberCount = document.querySelector(".member-count");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (memberCount && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (memberCount && !reduceMotion) {
   const target = Number(memberCount.dataset.count);
   const duration = 1800;
 
+  memberCount.textContent = "0";
+
   const animateCount = () => {
     const startTime = performance.now();
-    memberCount.textContent = "0";
 
     const updateCount = (currentTime) => {
       const progress = Math.min((currentTime - startTime) / duration, 1);
@@ -30,7 +32,7 @@ if (memberCount && !window.matchMedia("(prefers-reduced-motion: reduce)").matche
         observer.disconnect();
       }
     },
-    { threshold: 0.5 }
+    { threshold: 0.35 }
   );
 
   observer.observe(memberCount);
