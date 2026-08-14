@@ -33,6 +33,28 @@ if (menuToggle && siteMenu) {
   });
 }
 
+const copyButton = document.querySelector(".copy-button");
+const copyStatus = document.querySelector(".copy-status");
+
+if (copyButton && copyStatus) {
+  copyButton.addEventListener("click", async () => {
+    const value = copyButton.dataset.copy;
+
+    try {
+      await navigator.clipboard.writeText(value);
+      copyButton.querySelector(".copy-button-label").textContent = "Copied";
+      copyStatus.textContent = `${value} copied to your clipboard.`;
+
+      window.setTimeout(() => {
+        copyButton.querySelector(".copy-button-label").textContent = "Copy username";
+        copyStatus.textContent = "";
+      }, 3000);
+    } catch {
+      copyStatus.textContent = `Copy failed — my username is ${value}.`;
+    }
+  });
+}
+
 const memberCount = document.querySelector(".member-count");
 const communityReach = document.querySelector(".community-reach");
 
