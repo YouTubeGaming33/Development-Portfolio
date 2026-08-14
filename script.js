@@ -1,9 +1,11 @@
 const memberCount = document.querySelector(".member-count");
+const communityReach = document.querySelector(".community-reach");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (memberCount && !reduceMotion) {
+if (memberCount && communityReach && !reduceMotion) {
   const target = Number(memberCount.dataset.count);
-  const duration = 1800;
+  const duration = 4000;
+  const numberFormatter = new Intl.NumberFormat("en-GB");
 
   memberCount.textContent = "0";
 
@@ -12,10 +14,12 @@ if (memberCount && !reduceMotion) {
 
     const updateCount = (currentTime) => {
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const easedProgress = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
       const currentCount = Math.round(target * easedProgress);
 
-      memberCount.textContent = currentCount.toLocaleString("en-GB");
+      memberCount.textContent = numberFormatter.format(currentCount);
 
       if (progress < 1) {
         requestAnimationFrame(updateCount);
@@ -32,8 +36,8 @@ if (memberCount && !reduceMotion) {
         observer.disconnect();
       }
     },
-    { threshold: 0.35 }
+    { threshold: 0.25 }
   );
 
-  observer.observe(memberCount);
+  observer.observe(communityReach);
 }

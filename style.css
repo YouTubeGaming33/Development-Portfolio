@@ -44,7 +44,7 @@ h1 em { color:var(--violet); font-style:normal; }
 .community-reach::after { left:calc(50% + min(18vw,210px)); transform:rotate(180deg); }
 .community-reach-inner { min-height:310px; padding:clamp(4rem,8vw,6.5rem) 0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
 .community-reach-kicker { margin:0 0 .8rem; color:var(--violet); font-family:"DM Mono",monospace; font-size:.7rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; }
-.community-reach-total { color:var(--text); font-family:"DM Mono",monospace; font-size:clamp(4.5rem,11vw,8.5rem); font-weight:500; line-height:.88; letter-spacing:-.09em; text-shadow:0 0 45px rgba(124,108,255,.22); }
+.community-reach-total { color:var(--text); font-family:"DM Mono",monospace; font-size:clamp(3.25rem,7.5vw,6rem); font-weight:500; line-height:.92; letter-spacing:-.08em; text-shadow:0 0 45px rgba(124,108,255,.22); }
 .community-reach-inner>p:last-child { margin:.95rem 0 0; color:var(--muted); font-size:clamp(.72rem,1.3vw,.85rem); font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 .marquee { overflow:hidden; padding:1rem; color:#0a0d14; background:var(--violet); font-family:"DM Mono",monospace; font-size:.8rem; font-weight:500; text-align:center; white-space:nowrap; }.marquee span{padding:0 1.5rem}
 .section { padding:clamp(5rem,10vw,9rem) 0; }
