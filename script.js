@@ -1,3 +1,38 @@
+const menuToggle = document.querySelector(".menu-toggle");
+const siteMenu = document.querySelector("#site-menu");
+
+if (menuToggle && siteMenu) {
+  const closeMenu = () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    siteMenu.classList.remove("is-open");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    siteMenu.classList.toggle("is-open", !isOpen);
+  });
+
+  siteMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".nav")) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 620) closeMenu();
+  });
+}
+
 const memberCount = document.querySelector(".member-count");
 const communityReach = document.querySelector(".community-reach");
 
